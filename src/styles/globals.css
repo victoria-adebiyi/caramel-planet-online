@@ -1,0 +1,33 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+:root {
+  --foreground-rgb: 255, 255, 255;
+  --background-start-rgb: 50, 32, 110;
+  --background-end-rgb: 46, 15, 76;
+}
+
+.roomcanvas {
+  width: 492px;
+  height: 432px;
+  image-rendering: pixelated;
+}
+
+.doorcanvas{
+  width: 60px;
+  height: 96px;
+  image-rendering: pixelated;
+  cursor: pointer;
+}
+
+body {
+  color: rgb(var(--foreground-rgb));
+  background:
+   linear-gradient(
+      to bottom,
+      transparent,
+      rgb(var(--background-end-rgb))
+    )
+    rgb(var(--background-start-rgb));
+}
