@@ -5,9 +5,6 @@ import { StaticImageData } from 'next/image'
 import NextImage from 'next/image'
 
 export default function RoomMap() {
-    const [roomState, setRoomState] = useState<StaticImageData>(nighttime);
-    const [isImageReady, setIsImageReady] = useState(false);
-    const canvasRef = 'room'
     
     useEffect(() => {
         const canvas = document.getElementById('room') as HTMLCanvasElement;
