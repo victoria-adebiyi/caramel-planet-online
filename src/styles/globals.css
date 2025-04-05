@@ -5,6 +5,20 @@
 :root {
   --foreground-rgb: 255, 255, 255;
   --background-rgb: 50, 32, 110;
+  --background-rgb-start: 74, 143, 247;
+  --background-rgb-end: 210, 180, 247;
+}
+
+.pagediv {
+    position: relative; 
+    width: 774px; 
+    height: 512px;
+}
+
+.pagecanvas {
+    width: 774px; 
+    height: 512px;
+    image-rendering: pixelated;
 }
 
 .roomcanvas {
@@ -22,5 +36,5 @@
 
 body {
   color: rgb(var(--foreground-rgb));
-  background: rgb(var(--background-rgb));
+  background: linear-gradient(180deg, rgb(var(--background-rgb-start)) 0%, rgb(var(--background-rgb-end)) 100%);
 }

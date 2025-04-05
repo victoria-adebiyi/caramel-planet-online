@@ -1,27 +1,23 @@
 'use client';
-import { Button } from "@nextui-org/button";
 import AnimatedRoomMap from "./CaramelRoom/AnimatedRoomMap";
 import DoorButton from "./CaramelRoom/DoorButton";
-import { Modal, ModalContent, ModalFooter, useDisclosure } from "@nextui-org/modal";
+import { Modal, ModalContent, useDisclosure } from "@nextui-org/modal";
+import Paper from "./assets/paper-design/PaperBehind.png";
+import PaperBackground from "./PaperPage/PaperBackground";
 
 
 export default function Home() { 
-  const {isOpen, onOpen, onOpenChange} = useDisclosure(); 
-
-
-  const onClick = () => {
-    console.log('Button clicked!');
-  }
+  const {isOpen, onOpen, onOpenChange} = useDisclosure();
 
   return (
     <main className="flex min-h-screen flex-col items-center justify-between p-24">
       <div>
-        <DoorButton onClick={onOpen}/>
-        <Modal placement="top-center" isOpen={isOpen} onOpenChange={onOpenChange} size='md' classNames={{
+        <DoorButton onClick={onOpen} />
+        <Modal placement="top" isOpen={isOpen} onOpenChange={onOpenChange} size='md' classNames={{
           base: "outline-white/100",
-          backdrop: "blur bg-transparent"
+          backdrop: "blur backdrop-opacity-50",
         }}>
-        <ModalContent className="relative outline outline-1 outline-white/100 outline-offset-2 bg-outline_purple items-center rounded-lg max-w-fit">
+        <ModalContent className="shadow-none relative outline outline-1 outline-transparent outline-offset-2 bg-outline_purple/0 items-center rounded-lg max-w-fit">
           <AnimatedRoomMap/>
         </ModalContent>
       </Modal>

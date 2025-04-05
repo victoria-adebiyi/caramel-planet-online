@@ -1,8 +1,6 @@
 'use client';
-import React, {useEffect, useRef, useState} from 'react';
+import React, {useEffect} from 'react';
 import nighttime from '../assets/original_size_animated.png'
-import { StaticImageData } from 'next/image'
-import NextImage from 'next/image'
 
 export default function RoomMap() {
     

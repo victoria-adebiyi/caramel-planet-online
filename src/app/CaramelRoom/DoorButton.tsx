@@ -1,7 +1,6 @@
 'use client';
 import React, {useCallback, useEffect, useRef} from 'react';
 import door from '../assets/door.png';
-import { addPointerEvent } from 'framer-motion';
 
 interface DoorProps {
     onClick: () => void;
